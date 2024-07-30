@@ -13,6 +13,7 @@ class PostPolicy
      */
     public function viewAny(User $user): bool
     {
+        dd('test');
         return $user->isAdmin() || $user->isAuthor();
     }
 

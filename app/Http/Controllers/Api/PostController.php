@@ -6,6 +6,7 @@ use App\Http\Requests\Post\StorePostRequest;
 use App\Http\Requests\Post\UpdatePostRequest;
 use App\Http\Resources\PostResource;
 use App\Models\Post;
+use App\Policies\PostPolicy;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Gate;
@@ -18,6 +19,9 @@ use Spatie\QueryBuilder\QueryBuilder;
 #[Authenticated]
 class PostController extends Controller
 {
+    /**
+     * List posts
+     */
     public function index(): AnonymousResourceCollection
     {
         Gate::authorize('viewAny');
@@ -29,14 +33,27 @@ class PostController extends Controller
         return PostResource::collection($posts);
     }
 
+    /**
+     * Create post
+     *
+     * @param StorePostRequest $request
+     * @return JsonResponse
+     */
     public function store(StorePostRequest $request): JsonResponse
     {
         Gate::authorize('create');
 
         $post = Post::create($request->validated());
+        $post->syncTags($request->validated('tags'));
         return response()->json($post, 201);
     }
 
+    /**
+     * Show post
+     *
+     * @param Post $post
+     * @return JsonResponse
+     */
     public function show(Post $post): JsonResponse
     {
         Gate::authorize('view', $post);
@@ -44,14 +61,28 @@ class PostController extends Controller
         return response()->json($post);
     }
 
+    /**
+     * Update post
+     *
+     * @param UpdatePostRequest $request
+     * @param Post $post
+     * @return JsonResponse
+     */
     public function update(UpdatePostRequest $request, Post $post): JsonResponse
     {
         Gate::authorize('update', $post);
 
         $post->update($request->validated());
+        $post->syncTags($request->validated('tags'));
         return response()->json($post);
     }
 
+    /**
+     * Delete post
+     *
+     * @param Post $post
+     * @return JsonResponse
+     */
     public function destroy(Post $post): JsonResponse
     {
         Gate::authorize('delete', $post);

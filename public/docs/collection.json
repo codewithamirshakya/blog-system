@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Blog documentation",
-        "_postman_id": "7674296a-ecbf-462e-a37c-51b7cd19b4bd",
+        "_postman_id": "478f0f4a-e8c7-4d0a-b731-8f6e6ddc9031",
         "description": "log documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"ford81@example.org\",\"password\":\"deleniti\"}"
+                            "raw": "{\"email\":\"awyman@example.org\",\"password\":\"aliquam\"}"
                         },
                         "description": "",
                         "auth": {
@@ -148,7 +148,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"fugit\"}"
+                            "raw": "{\"name\":\"est\"}"
                         },
                         "description": ""
                     },
@@ -258,13 +258,13 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "asperiores",
+                                    "value": "commodi",
                                     "description": ""
                                 },
                                 {
                                     "id": "typeId",
                                     "key": "typeId",
-                                    "value": "et",
+                                    "value": "molestiae",
                                     "description": ""
                                 }
                             ]
@@ -281,10 +281,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": [
                         {
@@ -320,13 +317,13 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "perferendis",
+                                    "value": "similique",
                                     "description": ""
                                 },
                                 {
                                     "id": "typeId",
                                     "key": "typeId",
-                                    "value": "in",
+                                    "value": "doloribus",
                                     "description": ""
                                 }
                             ]
@@ -344,12 +341,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"body\":\"dolores\"}"
+                            "raw": "{\"body\":\"libero\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 },
@@ -365,7 +359,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "iusto",
+                                    "value": "quidem",
                                     "description": "The ID of the comment."
                                 }
                             ]
@@ -383,20 +377,218 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"body\":\"cum\"}"
+                            "raw": "{\"body\":\"libero\"}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": ""
                     },
                     "response": []
                 }
             ]
         },
         {
-            "name": "Endpoints",
-            "description": "",
+            "name": "Post management",
+            "description": "APIs for managing posts",
+            "item": [
+                {
+                    "name": "List posts",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Create post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"hqihmlchgroxw\",\"body\":\"mollitia\",\"category_id\":\"necessitatibus\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Show post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": [
+                        {
+                            "header": [
+                                {
+                                    "key": "cache-control",
+                                    "value": "no-cache, private"
+                                },
+                                {
+                                    "key": "content-type",
+                                    "value": "application\/json"
+                                },
+                                {
+                                    "key": "access-control-allow-origin",
+                                    "value": "*"
+                                }
+                            ],
+                            "code": 401,
+                            "body": "{\"message\":\"Unauthenticated.\"}",
+                            "name": ""
+                        }
+                    ]
+                },
+                {
+                    "name": "Update post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\"title\":\"timnrsnvcu\",\"body\":\"earum\",\"category_id\":\"unde\"}"
+                        },
+                        "description": ""
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Delete post",
+                    "request": {
+                        "url": {
+                            "host": "{{baseUrl}}",
+                            "path": "api\/posts\/:id",
+                            "query": [],
+                            "raw": "{{baseUrl}}\/api\/posts\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "1",
+                                    "description": "The ID of the post."
+                                }
+                            ]
+                        },
+                        "method": "DELETE",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": ""
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "User management",
+            "description": "APIs for managing users",
             "item": [
                 {
                     "name": "User list",
@@ -419,10 +611,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "Display a listing of the resource.",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": "Display a listing of the resource."
                     },
                     "response": [
                         {
@@ -468,12 +657,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"eurgohpudovhibiiyqq\",\"email\":\"nyah.bartell@example.net\",\"password\":\"ao%l'|}sd\"}"
+                            "raw": "{\"name\":\"fbklbvsnevgsuyiyjdoyklkuo\",\"email\":\"jlehner@example.org\",\"password\":\"*-<Os*@s<.\"}"
                         },
-                        "description": "Store a newly created resource in storage.",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": "Store a newly created resource in storage."
                     },
                     "response": []
                 },
@@ -506,10 +692,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "Display the specified resource.",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": "Display the specified resource."
                     },
                     "response": [
                         {
@@ -562,10 +745,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "Update the specified resource in storage.",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": "Update the specified resource in storage."
                     },
                     "response": []
                 },
@@ -598,211 +778,7 @@
                             }
                         ],
                         "body": null,
-                        "description": "Remove the specified resource from storage.",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "Post management",
-            "description": "APIs for managing posts",
-            "item": [
-                {
-                    "name": "GET api\/posts",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/posts",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/posts"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "POST api\/posts",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/posts",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/posts"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"title\":\"aiuxjuv\",\"body\":\"aliquam\",\"category_id\":\"aut\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "GET api\/posts\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/posts\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/posts\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "5",
-                                    "description": "The ID of the post."
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
-                    },
-                    "response": [
-                        {
-                            "header": [
-                                {
-                                    "key": "cache-control",
-                                    "value": "no-cache, private"
-                                },
-                                {
-                                    "key": "content-type",
-                                    "value": "application\/json"
-                                },
-                                {
-                                    "key": "access-control-allow-origin",
-                                    "value": "*"
-                                }
-                            ],
-                            "code": 401,
-                            "body": "{\"message\":\"Unauthenticated.\"}",
-                            "name": ""
-                        }
-                    ]
-                },
-                {
-                    "name": "PUT api\/posts\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/posts\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/posts\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "11",
-                                    "description": "The ID of the post."
-                                }
-                            ]
-                        },
-                        "method": "PUT",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": {
-                            "mode": "raw",
-                            "raw": "{\"title\":\"upfvfgeggbslgzmnsj\",\"body\":\"omnis\",\"category_id\":\"nihil\"}"
-                        },
-                        "description": ""
-                    },
-                    "response": []
-                },
-                {
-                    "name": "DELETE api\/posts\/{id}",
-                    "request": {
-                        "url": {
-                            "host": "{{baseUrl}}",
-                            "path": "api\/posts\/:id",
-                            "query": [],
-                            "raw": "{{baseUrl}}\/api\/posts\/:id",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "16",
-                                    "description": "The ID of the post."
-                                }
-                            ]
-                        },
-                        "method": "DELETE",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": ""
+                        "description": "Remove the specified resource from storage."
                     },
                     "response": []
                 }

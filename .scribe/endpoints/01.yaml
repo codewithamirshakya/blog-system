@@ -10,7 +10,7 @@ endpoints:
       groupDescription: 'APIs for managing posts'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'List posts'
       description: ''
       authenticated: true
       custom: []
@@ -39,7 +39,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer a6gcbV3dek1fE54PZhavD86'
+      - 'Bearer evaDPVk3dE64hafc5Z16gb8'
     controller: null
     method: null
     route: null
@@ -53,7 +53,7 @@ endpoints:
       groupDescription: 'APIs for managing posts'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Create post'
       description: ''
       authenticated: true
       custom: []
@@ -70,7 +70,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: aiuxjuv
+        example: hqihmlchgroxw
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -79,7 +79,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: aliquam
+        example: mollitia
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -88,22 +88,31 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: aut
+        example: necessitatibus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      tags:
+        name: tags
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
     cleanBodyParameters:
-      title: aiuxjuv
-      body: aliquam
-      category_id: aut
+      title: hqihmlchgroxw
+      body: mollitia
+      category_id: necessitatibus
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer PghZVb6dcE5ae1a84D36vfk'
+      - 'Bearer 1eVkbavZDaE35cd6Ph86gf4'
     controller: null
     method: null
     route: null
@@ -117,7 +126,7 @@ endpoints:
       groupDescription: 'APIs for managing posts'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Show post'
       description: ''
       authenticated: true
       custom: []
@@ -130,13 +139,13 @@ endpoints:
         name: id
         description: 'The ID of the post.'
         required: true
-        example: 5
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 5
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -156,7 +165,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Vbd6aDv4kPcZ6eEa538g1fh'
+      - 'Bearer v6ZehPg1k8aVD4aE5f3cb6d'
     controller: null
     method: null
     route: null
@@ -171,7 +180,7 @@ endpoints:
       groupDescription: 'APIs for managing posts'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Update post'
       description: ''
       authenticated: true
       custom: []
@@ -184,13 +193,13 @@ endpoints:
         name: id
         description: 'The ID of the post.'
         required: true
-        example: 11
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 11
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -198,7 +207,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: upfvfgeggbslgzmnsj
+        example: timnrsnvcu
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -207,7 +216,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: omnis
+        example: earum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -216,22 +225,31 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: nihil
+        example: unde
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
+      tags:
+        name: tags
+        description: ''
+        required: false
+        example: null
+        type: object
+        enumValues: []
+        exampleWasSpecified: false
+        custom: []
     cleanBodyParameters:
-      title: upfvfgeggbslgzmnsj
-      body: omnis
-      category_id: nihil
+      title: timnrsnvcu
+      body: earum
+      category_id: unde
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 5vcZdE16kDb4ePVf3h8aga6'
+      - 'Bearer 453k6aVg1fceDEhdabZv86P'
     controller: null
     method: null
     route: null
@@ -245,7 +263,7 @@ endpoints:
       groupDescription: 'APIs for managing posts'
       subgroup: ''
       subgroupDescription: ''
-      title: ''
+      title: 'Delete post'
       description: ''
       authenticated: true
       custom: []
@@ -258,13 +276,13 @@ endpoints:
         name: id
         description: 'The ID of the post.'
         required: true
-        example: 16
+        example: 1
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 16
+      id: 1
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -275,7 +293,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 54ec8Eka1g6a6VDZdbf3hPv'
+      - 'Bearer Df346deaZ5bacvhV6g1EP8k'
     controller: null
     method: null
     route: null

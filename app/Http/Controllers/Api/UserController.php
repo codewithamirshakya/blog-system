@@ -11,8 +11,12 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Gate;
+use Knuckles\Scribe\Attributes\Authenticated;
+use Knuckles\Scribe\Attributes\Group;
 use Spatie\QueryBuilder\QueryBuilder;
 
+#[Group("User management", "APIs for managing users")]
+#[Authenticated]
 class UserController extends Controller
 {
     /**

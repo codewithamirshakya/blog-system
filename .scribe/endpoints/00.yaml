@@ -1,20 +1,21 @@
-name: Endpoints
-description: ''
+name: 'User management'
+description: 'APIs for managing users'
 endpoints:
   -
     httpMethods:
       - GET
     uri: api/users
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'User management'
+      groupDescription: 'APIs for managing users'
       subgroup: ''
       subgroupDescription: ''
       title: 'User list'
       description: 'Display a listing of the resource.'
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -35,7 +36,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer hv68Da4b1Vf3ecZk5gdEaP6'
     controller: null
     method: null
     route: null
@@ -45,15 +49,16 @@ endpoints:
       - POST
     uri: api/users
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'User management'
+      groupDescription: 'APIs for managing users'
       subgroup: ''
       subgroupDescription: ''
       title: 'Create User'
       description: 'Store a newly created resource in storage.'
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters: []
@@ -65,7 +70,7 @@ endpoints:
         name: name
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: eurgohpudovhibiiyqq
+        example: fbklbvsnevgsuyiyjdoyklkuo
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -74,7 +79,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address. Must not be greater than 255 characters.'
         required: true
-        example: nyah.bartell@example.net
+        example: jlehner@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -83,19 +88,22 @@ endpoints:
         name: password
         description: 'Must be at least 6 characters.'
         required: true
-        example: "ao%l'|}sd"
+        example: '*-<Os*@s<.'
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: eurgohpudovhibiiyqq
-      email: nyah.bartell@example.net
-      password: "ao%l'|}sd"
+      name: fbklbvsnevgsuyiyjdoyklkuo
+      email: jlehner@example.org
+      password: '*-<Os*@s<.'
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer g8P46va6ckeV3fd1hbDZEa5'
     controller: null
     method: null
     route: null
@@ -105,15 +113,16 @@ endpoints:
       - GET
     uri: 'api/users/{id}'
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'User management'
+      groupDescription: 'APIs for managing users'
       subgroup: ''
       subgroupDescription: ''
       title: 'Show user'
       description: 'Display the specified resource.'
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -144,7 +153,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer vkEaZhg3486dDcabPe1V65f'
     controller: null
     method: null
     route: null
@@ -155,15 +167,16 @@ endpoints:
       - PATCH
     uri: 'api/users/{id}'
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'User management'
+      groupDescription: 'APIs for managing users'
       subgroup: ''
       subgroupDescription: ''
       title: 'Update user'
       description: 'Update the specified resource in storage.'
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -185,7 +198,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer Zfh64631cakPb8Dde5VavgE'
     controller: null
     method: null
     route: null
@@ -195,15 +211,16 @@ endpoints:
       - DELETE
     uri: 'api/users/{id}'
     metadata:
-      groupName: Endpoints
-      groupDescription: ''
+      groupName: 'User management'
+      groupDescription: 'APIs for managing users'
       subgroup: ''
       subgroupDescription: ''
       title: 'Delete user'
       description: 'Remove the specified resource from storage.'
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -225,7 +242,10 @@ endpoints:
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 3gP8va451Vec6hkd6bEfaDZ'
     controller: null
     method: null
     route: null

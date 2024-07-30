@@ -12,10 +12,11 @@ use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Gate;
+use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 
 #[Group("Comment management", "APIs for managing comments")]
-
+#[Authenticated]
 class CommentController extends Controller
 {
     /**

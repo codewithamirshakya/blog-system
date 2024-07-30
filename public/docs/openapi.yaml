@@ -26,11 +26,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: ford81@example.org
+                  example: awyman@example.org
                 password:
                   type: string
                   description: ''
-                  example: deleniti
+                  example: aliquam
               required:
                 - email
                 - password
@@ -83,7 +83,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: fugit
+                  example: est
               required:
                 - name
   '/api/categories/{id}':
@@ -145,7 +145,6 @@ paths:
                     example: Unauthenticated.
       tags:
         - 'Comment management'
-      security: []
     post:
       summary: 'Create comments for morphic model'
       operationId: createCommentsForMorphicModel
@@ -164,16 +163,15 @@ paths:
                 body:
                   type: string
                   description: ''
-                  example: dolores
+                  example: libero
               required:
                 - body
-      security: []
     parameters:
       -
         in: path
         name: type
         description: ''
-        example: asperiores
+        example: commodi
         required: true
         schema:
           type: string
@@ -181,7 +179,7 @@ paths:
         in: path
         name: typeId
         description: ''
-        example: et
+        example: molestiae
         required: true
         schema:
           type: string
@@ -204,19 +202,149 @@ paths:
                 body:
                   type: string
                   description: ''
-                  example: cum
+                  example: libero
               required:
                 - body
-      security: []
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the comment.'
-        example: iusto
+        example: quidem
         required: true
         schema:
           type: string
+  /api/posts:
+    get:
+      summary: 'List posts'
+      operationId: listPosts
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post management'
+    post:
+      summary: 'Create post'
+      operationId: createPost
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: hqihmlchgroxw
+                body:
+                  type: string
+                  description: ''
+                  example: mollitia
+                category_id:
+                  type: string
+                  description: ''
+                  example: necessitatibus
+                tags:
+                  type: object
+                  description: ''
+                  example: null
+                  properties: {  }
+              required:
+                - title
+                - body
+                - category_id
+  '/api/posts/{id}':
+    get:
+      summary: 'Show post'
+      operationId: showPost
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post management'
+    put:
+      summary: 'Update post'
+      operationId: updatePost
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: timnrsnvcu
+                body:
+                  type: string
+                  description: ''
+                  example: earum
+                category_id:
+                  type: string
+                  description: ''
+                  example: unde
+                tags:
+                  type: object
+                  description: ''
+                  example: null
+                  properties: {  }
+              required:
+                - title
+                - body
+                - category_id
+    delete:
+      summary: 'Delete post'
+      operationId: deletePost
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post management'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the post.'
+        example: 1
+        required: true
+        schema:
+          type: integer
   /api/users:
     get:
       summary: 'User list'
@@ -237,8 +365,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
-      security: []
+        - 'User management'
     post:
       summary: 'Create User'
       operationId: createUser
@@ -246,7 +373,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
+        - 'User management'
       requestBody:
         required: true
         content:
@@ -257,20 +384,19 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: eurgohpudovhibiiyqq
+                  example: fbklbvsnevgsuyiyjdoyklkuo
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: nyah.bartell@example.net
+                  example: jlehner@example.org
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: "ao%l'|}sd"
+                  example: '*-<Os*@s<.'
               required:
                 - name
                 - email
                 - password
-      security: []
   '/api/users/{id}':
     get:
       summary: 'Show user'
@@ -291,8 +417,7 @@ paths:
                     type: string
                     example: Unauthenticated.
       tags:
-        - Endpoints
-      security: []
+        - 'User management'
     put:
       summary: 'Update user'
       operationId: updateUser
@@ -300,8 +425,7 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
-      security: []
+        - 'User management'
     delete:
       summary: 'Delete user'
       operationId: deleteUser
@@ -309,135 +433,13 @@ paths:
       parameters: []
       responses: {  }
       tags:
-        - Endpoints
-      security: []
+        - 'User management'
     parameters:
       -
         in: path
         name: id
         description: 'The ID of the user.'
         example: 1
-        required: true
-        schema:
-          type: integer
-  /api/posts:
-    get:
-      summary: ''
-      operationId: getApiPosts
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - 'Post management'
-    post:
-      summary: ''
-      operationId: postApiPosts
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - 'Post management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: aiuxjuv
-                body:
-                  type: string
-                  description: ''
-                  example: aliquam
-                category_id:
-                  type: string
-                  description: ''
-                  example: aut
-              required:
-                - title
-                - body
-                - category_id
-  '/api/posts/{id}':
-    get:
-      summary: ''
-      operationId: getApiPostsId
-      description: ''
-      parameters: []
-      responses:
-        401:
-          description: ''
-          content:
-            application/json:
-              schema:
-                type: object
-                example:
-                  message: Unauthenticated.
-                properties:
-                  message:
-                    type: string
-                    example: Unauthenticated.
-      tags:
-        - 'Post management'
-    put:
-      summary: ''
-      operationId: putApiPostsId
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - 'Post management'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                title:
-                  type: string
-                  description: 'Must not be greater than 255 characters.'
-                  example: upfvfgeggbslgzmnsj
-                body:
-                  type: string
-                  description: ''
-                  example: omnis
-                category_id:
-                  type: string
-                  description: ''
-                  example: nihil
-              required:
-                - title
-                - body
-                - category_id
-    delete:
-      summary: ''
-      operationId: deleteApiPostsId
-      description: ''
-      parameters: []
-      responses: {  }
-      tags:
-        - 'Post management'
-    parameters:
-      -
-        in: path
-        name: id
-        description: 'The ID of the post.'
-        example: 5
         required: true
         schema:
           type: integer
@@ -452,11 +454,11 @@ tags:
     name: 'Comment management'
     description: 'APIs for managing comments'
   -
-    name: Endpoints
-    description: ''
-  -
     name: 'Post management'
     description: 'APIs for managing posts'
+  -
+    name: 'User management'
+    description: 'APIs for managing users'
 components:
   securitySchemes:
     default:

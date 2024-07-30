@@ -14,9 +14,10 @@ endpoints:
       subgroupDescription: ''
       title: 'List comments for morphic model'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -24,7 +25,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: asperiores
+        example: commodi
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -33,14 +34,14 @@ endpoints:
         name: typeId
         description: ''
         required: true
-        example: et
+        example: molestiae
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      type: asperiores
-      typeId: et
+      type: commodi
+      typeId: molestiae
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -57,7 +58,10 @@ endpoints:
         description: null
         custom: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 1DegEb8V45h6Zvkdc3aaPf6'
     controller: null
     method: null
     route: null
@@ -73,9 +77,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Create comments for morphic model'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -83,7 +88,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: perferendis
+        example: similique
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -92,14 +97,14 @@ endpoints:
         name: typeId
         description: ''
         required: true
-        example: in
+        example: doloribus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      type: perferendis
-      typeId: in
+      type: similique
+      typeId: doloribus
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -107,17 +112,20 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: dolores
+        example: libero
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      body: dolores
+      body: libero
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer k34P5dagaZEf8bv6D1ehcV6'
     controller: null
     method: null
     route: null
@@ -133,9 +141,10 @@ endpoints:
       subgroupDescription: ''
       title: 'Update comment'
       description: ''
-      authenticated: false
+      authenticated: true
       custom: []
     headers:
+      Authorization: 'Bearer {YOUR_AUTH_KEY}'
       Content-Type: application/json
       Accept: application/json
     urlParameters:
@@ -143,13 +152,13 @@ endpoints:
         name: id
         description: 'The ID of the comment.'
         required: true
-        example: iusto
+        example: quidem
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: iusto
+      id: quidem
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -157,17 +166,20 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: cum
+        example: libero
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      body: cum
+      body: libero
     fileParameters: []
     responses: []
     responseFields: []
-    auth: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer kDc6ah1d43Z5EPfVba6gve8'
     controller: null
     method: null
     route: null

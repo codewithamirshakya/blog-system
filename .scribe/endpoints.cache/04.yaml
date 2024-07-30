@@ -28,7 +28,7 @@ endpoints:
         name: email
         description: 'Must be a valid email address.'
         required: true
-        example: ford81@example.org
+        example: awyman@example.org
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -37,14 +37,14 @@ endpoints:
         name: password
         description: ''
         required: true
-        example: deleniti
+        example: aliquam
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      email: ford81@example.org
-      password: deleniti
+      email: awyman@example.org
+      password: aliquam
     fileParameters: []
     responses: []
     responseFields: []
@@ -82,7 +82,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer kZ58cV43PEh6ab1vgaf6edD'
+      - 'Bearer D635eE4gvdZ1aVPk6afcbh8'
     controller: null
     method: null
     route: null
