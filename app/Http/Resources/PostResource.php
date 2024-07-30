@@ -17,6 +17,7 @@ class PostResource extends JsonResource
         $data = parent::toArray($request);
         $data['user'] = new UserResource($this->whenLoaded('user'));
         $data['comments'] =  CommentResource::collection($this->whenLoaded('comments'));
+        $data['tags'] =  $this->whenLoaded('tags');
         return $data;
     }
 }
