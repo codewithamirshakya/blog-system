@@ -37,7 +37,7 @@ class PostPolicy
      */
     public function update(User $user, Post $post): bool
     {
-        return $user->can('update-posts') && $user->id === $post->user_id;
+        return $user->can('edit-posts') && $user->id === $post->user_id;
     }
 
     /**

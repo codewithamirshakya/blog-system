@@ -8,9 +8,11 @@ use App\Http\Resources\CategoryResource;
 use App\Models\Category;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Lang;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 #[Group("Category management", "APIs for managing categories")]
 #[Authenticated]
@@ -31,15 +33,15 @@ class CategoryController extends Controller
     {
         $category = Category::create($request->all());
 
-        return response()->json($category, 201);
+        return $this->successResponse(__('category.created'),$category, ResponseAlias::HTTP_CREATED);
     }
 
     /**
      * Show categories
      */
-    public function show(Category $category): JsonResponse
+    public function show(Category $category): CategoryResource
     {
-        return response()->json($category);
+        return new CategoryResource($category);
     }
 
     /**
@@ -49,7 +51,7 @@ class CategoryController extends Controller
     {
         $category->update($request->validated());
 
-        return response()->json($category);
+        return $this->successResponse(__('category.update'),$category, ResponseAlias::HTTP_OK);
     }
 
     /**
@@ -59,7 +61,7 @@ class CategoryController extends Controller
     {
         $category->delete();
 
-        return response()->json(Lang::get('category.deleted'), 204);
+        return response()->json(Lang::get('category.deleted'), ResponseAlias::HTTP_OK);
     }
 }
 

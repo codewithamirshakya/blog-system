@@ -21,7 +21,7 @@ class CommentPolicy
      */
     public function view(User $user, Comment $comment): bool
     {
-        return $user->can('list-comments');
+        return $user->can('view-comments');
     }
 
     /**
@@ -37,7 +37,7 @@ class CommentPolicy
      */
     public function update(User $user, Comment $comment): bool
     {
-        return $user->can('update-comments') && $user->id === $comment->user_id;
+        return $user->can('edit-comments') && $user->id === $comment->user_id;
     }
 
     /**

@@ -9,11 +9,13 @@ use App\Models\Post;
 use App\Policies\PostPolicy;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Lang;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
 use Spatie\QueryBuilder\QueryBuilder;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 #[Group("Post management", "APIs for managing posts")]
 #[Authenticated]
@@ -45,20 +47,20 @@ class PostController extends Controller
 
         $post = Post::create($request->validated());
         $post->syncTags($request->validated('tags'));
-        return response()->json($post, 201);
+        return $this->successResponse(__('post.created'),$post, ResponseAlias::HTTP_CREATED);
     }
 
     /**
      * Show post
      *
      * @param Post $post
-     * @return JsonResponse
+     * @return PostResource
      */
-    public function show(Post $post): JsonResponse
+    public function show(Post $post): PostResource
     {
         Gate::authorize('view', $post);
 
-        return response()->json($post);
+        return new PostResource($post);
     }
 
     /**
@@ -73,8 +75,12 @@ class PostController extends Controller
         Gate::authorize('update', $post);
 
         $post->update($request->validated());
-        $post->syncTags($request->validated('tags'));
-        return response()->json($post);
+
+        if ($request->has('tags')) {
+            $post->syncTags($request->validated('tags'));
+        }
+
+        return $this->successResponse(__('post.updated'),$post, ResponseAlias::HTTP_OK);
     }
 
     /**
@@ -88,7 +94,7 @@ class PostController extends Controller
         Gate::authorize('delete', $post);
 
         $post->delete();
-        return response()->json(Lang::get('post.deleted'), 204);
+        return $this->successResponse(__('post.deleted'), [],ResponseAlias::HTTP_OK);
     }
 }
 
