@@ -11,9 +11,12 @@ use App\Models\Post; // Import other models as needed
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Lang;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 #[Group("Comment management", "APIs for managing comments")]
 #[Authenticated]
@@ -47,18 +50,18 @@ class CommentController extends Controller
 
         $comment = $instance->comments()->create($request->all());
 
-        return response()->json($comment, 201);
+        return $this->successResponse(__('comment.created'),$comment, ResponseAlias::HTTP_CREATED);
     }
 
     /**
      * Show comments
      *
      * @param Comment $comment
-     * @return JsonResponse
+     * @return CommentResource
      */
-    public function show(Comment $comment): JsonResponse
+    public function show(Comment $comment): CommentResource
     {
-        return response()->json($comment);
+        return new CommentResource($comment);
     }
 
     /**
@@ -76,7 +79,7 @@ class CommentController extends Controller
 
         $comment->update($request->all());
 
-        return response()->json($comment);
+        return $this->successResponse(__('comment.updated'),$comment, ResponseAlias::HTTP_OK);
     }
 
     /**
@@ -89,7 +92,7 @@ class CommentController extends Controller
     {
         $comment->delete();
 
-        return response()->json(null, 204);
+        return $this->successResponse(__('comment.deleted'), [],ResponseAlias::HTTP_OK);
     }
 
     /**

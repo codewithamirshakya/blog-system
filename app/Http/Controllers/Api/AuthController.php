@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 #[Group("Auth management", "APIs for managing authentication")]
 
@@ -34,7 +35,7 @@ class AuthController extends Controller
 
         $token = $user->createToken('auth_token');
 
-        return response()->json([
+        return $this->successResponse(__('Login success'), [
             'access_token' => $token->plainTextToken,
             'token_type' => 'Bearer',
             'expires_in' => $token->accessToken->expire_at,
@@ -51,8 +52,6 @@ class AuthController extends Controller
     {
         $request->user()->currentAccessToken()->delete();
 
-        return response()->json([
-            'message' => 'Logged out successfully'
-        ]);
+        return $this->successResponse(__('Logout success'), []);
     }
 }
