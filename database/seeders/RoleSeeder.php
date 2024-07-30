@@ -18,8 +18,7 @@ class RoleSeeder extends Seeder
 
         foreach ($roles as $role) {
             $data = [
-                'name' => $role->value,
-                'guard_name' => 'web',
+                'name' => $role->value
             ];
             Role::create($data);
         }

@@ -13,8 +13,7 @@ class CommentPolicy
      */
     public function viewAny(User $user): bool
     {
-        dd('test');
-        return $user->isAdmin() || $user->isAuthor();
+        return $user->can('list-comments');
     }
 
     /**
@@ -22,7 +21,7 @@ class CommentPolicy
      */
     public function view(User $user, Comment $comment): bool
     {
-        return $user->isAdmin() || $user->isAuthor();
+        return $user->can('list-comments');
     }
 
     /**
@@ -30,7 +29,7 @@ class CommentPolicy
      */
     public function create(User $user): bool
     {
-        return $user->isAdmin() || $user->isAuthor();
+        return $user->can('create-comments');
     }
 
     /**
@@ -38,7 +37,7 @@ class CommentPolicy
      */
     public function update(User $user, Comment $comment): bool
     {
-        return $user->isAdmin() || ($user->isAuthor() && $user->id === $comment->user_id);
+        return $user->can('update-comments') && $user->id === $comment->user_id;
     }
 
     /**
@@ -46,6 +45,6 @@ class CommentPolicy
      */
     public function delete(User $user, Comment $comment): bool
     {
-        return $user->isAdmin() || ($user->isAuthor() && $user->id === $comment->user_id);
+        return $user->can('delete-comments') && $user->id === $comment->user_id;
     }
 }
