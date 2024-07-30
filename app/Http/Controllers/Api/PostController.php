@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers\Api;
 
+use App\Filters\FiltersTag;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Post\StorePostRequest;
 use App\Http\Requests\Post\UpdatePostRequest;
@@ -14,6 +15,7 @@ use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Lang;
 use Knuckles\Scribe\Attributes\Authenticated;
 use Knuckles\Scribe\Attributes\Group;
+use Spatie\QueryBuilder\AllowedFilter;
 use Spatie\QueryBuilder\QueryBuilder;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
@@ -29,8 +31,9 @@ class PostController extends Controller
         Gate::authorize('viewAny', Post::class);
 
         $posts = QueryBuilder::for(Post::class)
-            ->allowedIncludes(['user','comments'])
-            ->allowedFilters(['title', 'body', 'name'])
+            ->with(['user', 'comments', 'tags'])
+            ->allowedIncludes(['user','comments','tags'])
+            ->allowedFilters(['title', 'body', 'user.name',AllowedFilter::custom('tags.name', new FiltersTag()),])
             ->paginate();
         return PostResource::collection($posts);
     }
