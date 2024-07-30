@@ -39,7 +39,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer evaDPVk3dE64hafc5Z16gb8'
+      - 'Bearer 6egadfc6b31VkD5ZPaE8h4v'
     controller: null
     method: null
     route: null
@@ -70,7 +70,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: hqihmlchgroxw
+        example: jhwiglml
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -79,7 +79,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: mollitia
+        example: odio
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -88,7 +88,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: necessitatibus
+        example: non
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -103,16 +103,16 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: hqihmlchgroxw
-      body: mollitia
-      category_id: necessitatibus
+      title: jhwiglml
+      body: odio
+      category_id: non
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 1eVkbavZDaE35cd6Ph86gf4'
+      - 'Bearer kfdEgaa6D586PV4bhcv3Z1e'
     controller: null
     method: null
     route: null
@@ -139,13 +139,13 @@ endpoints:
         name: id
         description: 'The ID of the post.'
         required: true
-        example: 1
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -165,7 +165,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer v6ZehPg1k8aVD4aE5f3cb6d'
+      - 'Bearer E4D35ZcbVfa1dv86keah6gP'
     controller: null
     method: null
     route: null
@@ -193,13 +193,13 @@ endpoints:
         name: id
         description: 'The ID of the post.'
         required: true
-        example: 1
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -207,7 +207,7 @@ endpoints:
         name: title
         description: 'Must not be greater than 255 characters.'
         required: true
-        example: timnrsnvcu
+        example: bqiygrnnlavasnhizmcqcmns
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -216,7 +216,7 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: earum
+        example: laboriosam
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -225,7 +225,7 @@ endpoints:
         name: category_id
         description: ''
         required: true
-        example: unde
+        example: cum
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -240,16 +240,16 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      title: timnrsnvcu
-      body: earum
-      category_id: unde
+      title: bqiygrnnlavasnhizmcqcmns
+      body: laboriosam
+      category_id: cum
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer 453k6aVg1fceDEhdabZv86P'
+      - 'Bearer dgav1Ph8Ee3abk465VfcD6Z'
     controller: null
     method: null
     route: null
@@ -276,13 +276,13 @@ endpoints:
         name: id
         description: 'The ID of the post.'
         required: true
-        example: 1
+        example: 3
         type: integer
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: 1
+      id: 3
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters: []
@@ -293,7 +293,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer Df346deaZ5bacvhV6g1EP8k'
+      - 'Bearer cD8ab3h1ve5Eka64Zfd6PgV'
     controller: null
     method: null
     route: null

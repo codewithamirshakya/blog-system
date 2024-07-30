@@ -41,7 +41,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer dPDfeVvEch8ga36165ba4Zk'
+      - 'Bearer faP3cbgv8ZVh566k4a1DdeE'
     controller: null
     method: null
     route: null
@@ -72,20 +72,20 @@ endpoints:
         name: name
         description: ''
         required: true
-        example: est
+        example: in
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      name: est
+      name: in
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer da4ga6DvbE6c5kZ31hf8PeV'
+      - 'Bearer aEeac61Pgbdh4Dv6V58f3kZ'
     controller: null
     method: null
     route: null
@@ -138,7 +138,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer f3VEe5P1466gZvDdhkacba8'
+      - 'Bearer kVEvZ6ae5f8DcbPd64h13ga'
     controller: null
     method: null
     route: null
@@ -182,7 +182,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 6Ev1bcaPf8eah4kZ6DgV53d'
+      - 'Bearer cZk5hgaaEeb64vfDdV168P3'
     controller: null
     method: null
     route: null

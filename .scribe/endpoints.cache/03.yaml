@@ -25,7 +25,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: commodi
+        example: voluptatem
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -40,7 +40,7 @@ endpoints:
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      type: commodi
+      type: voluptatem
       typeId: molestiae
     queryParameters: []
     cleanQueryParameters: []
@@ -61,7 +61,7 @@ endpoints:
     auth:
       - headers
       - Authorization
-      - 'Bearer 1DegEb8V45h6Zvkdc3aaPf6'
+      - 'Bearer gfh6ava3kEdbZ5D1V4Pe68c'
     controller: null
     method: null
     route: null
@@ -88,7 +88,7 @@ endpoints:
         name: type
         description: ''
         required: true
-        example: similique
+        example: deleniti
         type: string
         enumValues: []
         exampleWasSpecified: false
@@ -97,14 +97,14 @@ endpoints:
         name: typeId
         description: ''
         required: true
-        example: doloribus
+        example: qui
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      type: similique
-      typeId: doloribus
+      type: deleniti
+      typeId: qui
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -112,20 +112,20 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: libero
+        example: delectus
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      body: libero
+      body: delectus
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer k34P5dagaZEf8bv6D1ehcV6'
+      - 'Bearer 4dh6cDEVag8Zkv3Pa51f6be'
     controller: null
     method: null
     route: null
@@ -152,13 +152,13 @@ endpoints:
         name: id
         description: 'The ID of the comment.'
         required: true
-        example: quidem
+        example: inventore
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanUrlParameters:
-      id: quidem
+      id: inventore
     queryParameters: []
     cleanQueryParameters: []
     bodyParameters:
@@ -166,20 +166,20 @@ endpoints:
         name: body
         description: ''
         required: true
-        example: libero
+        example: minima
         type: string
         enumValues: []
         exampleWasSpecified: false
         custom: []
     cleanBodyParameters:
-      body: libero
+      body: minima
     fileParameters: []
     responses: []
     responseFields: []
     auth:
       - headers
       - Authorization
-      - 'Bearer kDc6ah1d43Z5EPfVba6gve8'
+      - 'Bearer fE63g6Dcda15hPZkv4eaV8b'
     controller: null
     method: null
     route: null

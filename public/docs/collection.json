@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Blog documentation",
-        "_postman_id": "478f0f4a-e8c7-4d0a-b731-8f6e6ddc9031",
+        "_postman_id": "645b0c6e-b783-4eaf-a2c7-b48144a01e81",
         "description": "log documentation",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -41,7 +41,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"email\":\"awyman@example.org\",\"password\":\"aliquam\"}"
+                            "raw": "{\"email\":\"uwalsh@example.com\",\"password\":\"ducimus\"}"
                         },
                         "description": "",
                         "auth": {
@@ -148,7 +148,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"est\"}"
+                            "raw": "{\"name\":\"in\"}"
                         },
                         "description": ""
                     },
@@ -258,7 +258,7 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "commodi",
+                                    "value": "voluptatem",
                                     "description": ""
                                 },
                                 {
@@ -317,13 +317,13 @@
                                 {
                                     "id": "type",
                                     "key": "type",
-                                    "value": "similique",
+                                    "value": "deleniti",
                                     "description": ""
                                 },
                                 {
                                     "id": "typeId",
                                     "key": "typeId",
-                                    "value": "doloribus",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -341,7 +341,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"body\":\"libero\"}"
+                            "raw": "{\"body\":\"delectus\"}"
                         },
                         "description": ""
                     },
@@ -359,7 +359,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "quidem",
+                                    "value": "inventore",
                                     "description": "The ID of the comment."
                                 }
                             ]
@@ -377,7 +377,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"body\":\"libero\"}"
+                            "raw": "{\"body\":\"minima\"}"
                         },
                         "description": ""
                     },
@@ -456,7 +456,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"hqihmlchgroxw\",\"body\":\"mollitia\",\"category_id\":\"necessitatibus\"}"
+                            "raw": "{\"title\":\"jhwiglml\",\"body\":\"odio\",\"category_id\":\"non\"}"
                         },
                         "description": ""
                     },
@@ -474,7 +474,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "3",
                                     "description": "The ID of the post."
                                 }
                             ]
@@ -527,7 +527,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "3",
                                     "description": "The ID of the post."
                                 }
                             ]
@@ -545,7 +545,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"title\":\"timnrsnvcu\",\"body\":\"earum\",\"category_id\":\"unde\"}"
+                            "raw": "{\"title\":\"bqiygrnnlavasnhizmcqcmns\",\"body\":\"laboriosam\",\"category_id\":\"cum\"}"
                         },
                         "description": ""
                     },
@@ -563,7 +563,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "1",
+                                    "value": "3",
                                     "description": "The ID of the post."
                                 }
                             ]
@@ -657,7 +657,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\"name\":\"fbklbvsnevgsuyiyjdoyklkuo\",\"email\":\"jlehner@example.org\",\"password\":\"*-<Os*@s<.\"}"
+                            "raw": "{\"name\":\"mfti\",\"email\":\"fwisoky@example.net\",\"password\":\"l9&J@Q'dQ$wLku8Y<\"}"
                         },
                         "description": "Store a newly created resource in storage."
                     },

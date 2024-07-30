@@ -26,11 +26,11 @@ paths:
                 email:
                   type: string
                   description: 'Must be a valid email address.'
-                  example: awyman@example.org
+                  example: uwalsh@example.com
                 password:
                   type: string
                   description: ''
-                  example: aliquam
+                  example: ducimus
               required:
                 - email
                 - password
@@ -83,7 +83,7 @@ paths:
                 name:
                   type: string
                   description: ''
-                  example: est
+                  example: in
               required:
                 - name
   '/api/categories/{id}':
@@ -163,7 +163,7 @@ paths:
                 body:
                   type: string
                   description: ''
-                  example: libero
+                  example: delectus
               required:
                 - body
     parameters:
@@ -171,7 +171,7 @@ paths:
         in: path
         name: type
         description: ''
-        example: commodi
+        example: voluptatem
         required: true
         schema:
           type: string
@@ -202,7 +202,7 @@ paths:
                 body:
                   type: string
                   description: ''
-                  example: libero
+                  example: minima
               required:
                 - body
     parameters:
@@ -210,7 +210,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the comment.'
-        example: quidem
+        example: inventore
         required: true
         schema:
           type: string
@@ -253,15 +253,15 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: hqihmlchgroxw
+                  example: jhwiglml
                 body:
                   type: string
                   description: ''
-                  example: mollitia
+                  example: odio
                 category_id:
                   type: string
                   description: ''
-                  example: necessitatibus
+                  example: non
                 tags:
                   type: object
                   description: ''
@@ -310,15 +310,15 @@ paths:
                 title:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: timnrsnvcu
+                  example: bqiygrnnlavasnhizmcqcmns
                 body:
                   type: string
                   description: ''
-                  example: earum
+                  example: laboriosam
                 category_id:
                   type: string
                   description: ''
-                  example: unde
+                  example: cum
                 tags:
                   type: object
                   description: ''
@@ -341,7 +341,7 @@ paths:
         in: path
         name: id
         description: 'The ID of the post.'
-        example: 1
+        example: 3
         required: true
         schema:
           type: integer
@@ -384,15 +384,15 @@ paths:
                 name:
                   type: string
                   description: 'Must not be greater than 255 characters.'
-                  example: fbklbvsnevgsuyiyjdoyklkuo
+                  example: mfti
                 email:
                   type: string
                   description: 'Must be a valid email address. Must not be greater than 255 characters.'
-                  example: jlehner@example.org
+                  example: fwisoky@example.net
                 password:
                   type: string
                   description: 'Must be at least 6 characters.'
-                  example: '*-<Os*@s<.'
+                  example: "l9&J@Q'dQ$wLku8Y<"
               required:
                 - name
                 - email
