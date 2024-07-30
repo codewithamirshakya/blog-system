@@ -24,7 +24,7 @@ class PostController extends Controller
      */
     public function index(): AnonymousResourceCollection
     {
-        Gate::authorize('viewAny');
+        Gate::authorize('viewAny', Post::class);
 
         $posts = QueryBuilder::for(Post::class)
             ->allowedIncludes(['user','comments'])
@@ -41,7 +41,7 @@ class PostController extends Controller
      */
     public function store(StorePostRequest $request): JsonResponse
     {
-        Gate::authorize('create');
+        Gate::authorize('create', Post::class);
 
         $post = Post::create($request->validated());
         $post->syncTags($request->validated('tags'));

@@ -13,8 +13,7 @@ class PostPolicy
      */
     public function viewAny(User $user): bool
     {
-        dd('test');
-        return $user->isAdmin() || $user->isAuthor();
+        return $user->can('list-posts');
     }
 
     /**
@@ -22,7 +21,7 @@ class PostPolicy
      */
     public function view(User $user, Post $post): bool
     {
-        return $user->isAdmin() || $user->isAuthor();
+        return $user->can('view-posts');
     }
 
     /**
@@ -30,7 +29,7 @@ class PostPolicy
      */
     public function create(User $user): bool
     {
-        return $user->isAdmin() || $user->isAuthor();
+        return $user->can('create-posts');
     }
 
     /**
@@ -38,7 +37,7 @@ class PostPolicy
      */
     public function update(User $user, Post $post): bool
     {
-        return $user->isAdmin() || ($user->isAuthor() && $user->id === $post->user_id);
+        return $user->can('update-posts') && $user->id === $post->user_id;
     }
 
     /**
@@ -46,6 +45,6 @@ class PostPolicy
      */
     public function delete(User $user, Post $post): bool
     {
-        return $user->isAdmin() || ($user->isAuthor() && $user->id === $post->user_id);
+        return $user->can('delete-posts') && $user->id === $post->user_id;
     }
 }

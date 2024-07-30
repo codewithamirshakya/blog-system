@@ -18,7 +18,7 @@ class RolePermissionSeeder extends Seeder
         User::where('email', 'admin@blog.com')->first()->assignRole(RoleEnum::ADMIN);
         User::where('email', 'author@blog.com')->first()->assignRole(RoleEnum::AUTHOR);
 
-        Role::where(['name' => RoleEnum::AUTHOR])->first()->syncPermissions(PermissionSeeder::$permissions);
+        Role::where(['name' => RoleEnum::ADMIN])->first()->syncPermissions(PermissionSeeder::$permissions);
         Role::where(['name' => RoleEnum::AUTHOR])->first()->syncPermissions(PermissionSeeder::$authorPermissions);
 
     }
