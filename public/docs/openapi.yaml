@@ -1,0 +1,468 @@
+openapi: 3.0.3
+info:
+  title: 'Blog documentation'
+  description: 'log documentation'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost:8000'
+paths:
+  /api/login:
+    post:
+      summary: 'Login user'
+      operationId: loginUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Auth management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: 'Must be a valid email address.'
+                  example: ford81@example.org
+                password:
+                  type: string
+                  description: ''
+                  example: deleniti
+              required:
+                - email
+                - password
+      security: []
+  /api/logout:
+    post:
+      summary: 'Logout user'
+      operationId: logoutUser
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Auth management'
+  /api/categories:
+    get:
+      summary: 'List categories'
+      operationId: listCategories
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Category management'
+    post:
+      summary: 'Create categories'
+      operationId: createCategories
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Category management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: ''
+                  example: fugit
+              required:
+                - name
+  '/api/categories/{id}':
+    get:
+      summary: 'Show categories'
+      operationId: showCategories
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Category management'
+    delete:
+      summary: 'Delete categories'
+      operationId: deleteCategories
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Category management'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the category.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  '/api/comments/{type}/{typeId}':
+    get:
+      summary: 'List comments for morphic model'
+      operationId: listCommentsForMorphicModel
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Comment management'
+      security: []
+    post:
+      summary: 'Create comments for morphic model'
+      operationId: createCommentsForMorphicModel
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Comment management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  type: string
+                  description: ''
+                  example: dolores
+              required:
+                - body
+      security: []
+    parameters:
+      -
+        in: path
+        name: type
+        description: ''
+        example: asperiores
+        required: true
+        schema:
+          type: string
+      -
+        in: path
+        name: typeId
+        description: ''
+        example: et
+        required: true
+        schema:
+          type: string
+  '/api/comments/{id}':
+    put:
+      summary: 'Update comment'
+      operationId: updateComment
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Comment management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                body:
+                  type: string
+                  description: ''
+                  example: cum
+              required:
+                - body
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the comment.'
+        example: iusto
+        required: true
+        schema:
+          type: string
+  /api/users:
+    get:
+      summary: 'User list'
+      operationId: userList
+      description: 'Display a listing of the resource.'
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    post:
+      summary: 'Create User'
+      operationId: createUser
+      description: 'Store a newly created resource in storage.'
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: eurgohpudovhibiiyqq
+                email:
+                  type: string
+                  description: 'Must be a valid email address. Must not be greater than 255 characters.'
+                  example: nyah.bartell@example.net
+                password:
+                  type: string
+                  description: 'Must be at least 6 characters.'
+                  example: "ao%l'|}sd"
+              required:
+                - name
+                - email
+                - password
+      security: []
+  '/api/users/{id}':
+    get:
+      summary: 'Show user'
+      operationId: showUser
+      description: 'Display the specified resource.'
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - Endpoints
+      security: []
+    put:
+      summary: 'Update user'
+      operationId: updateUser
+      description: 'Update the specified resource in storage.'
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    delete:
+      summary: 'Delete user'
+      operationId: deleteUser
+      description: 'Remove the specified resource from storage.'
+      parameters: []
+      responses: {  }
+      tags:
+        - Endpoints
+      security: []
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the user.'
+        example: 1
+        required: true
+        schema:
+          type: integer
+  /api/posts:
+    get:
+      summary: ''
+      operationId: getApiPosts
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post management'
+    post:
+      summary: ''
+      operationId: postApiPosts
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: aiuxjuv
+                body:
+                  type: string
+                  description: ''
+                  example: aliquam
+                category_id:
+                  type: string
+                  description: ''
+                  example: aut
+              required:
+                - title
+                - body
+                - category_id
+  '/api/posts/{id}':
+    get:
+      summary: ''
+      operationId: getApiPostsId
+      description: ''
+      parameters: []
+      responses:
+        401:
+          description: ''
+          content:
+            application/json:
+              schema:
+                type: object
+                example:
+                  message: Unauthenticated.
+                properties:
+                  message:
+                    type: string
+                    example: Unauthenticated.
+      tags:
+        - 'Post management'
+    put:
+      summary: ''
+      operationId: putApiPostsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post management'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title:
+                  type: string
+                  description: 'Must not be greater than 255 characters.'
+                  example: upfvfgeggbslgzmnsj
+                body:
+                  type: string
+                  description: ''
+                  example: omnis
+                category_id:
+                  type: string
+                  description: ''
+                  example: nihil
+              required:
+                - title
+                - body
+                - category_id
+    delete:
+      summary: ''
+      operationId: deleteApiPostsId
+      description: ''
+      parameters: []
+      responses: {  }
+      tags:
+        - 'Post management'
+    parameters:
+      -
+        in: path
+        name: id
+        description: 'The ID of the post.'
+        example: 5
+        required: true
+        schema:
+          type: integer
+tags:
+  -
+    name: 'Auth management'
+    description: 'APIs for managing authentication'
+  -
+    name: 'Category management'
+    description: 'APIs for managing categories'
+  -
+    name: 'Comment management'
+    description: 'APIs for managing comments'
+  -
+    name: Endpoints
+    description: ''
+  -
+    name: 'Post management'
+    description: 'APIs for managing posts'
+components:
+  securitySchemes:
+    default:
+      type: http
+      scheme: bearer
+      description: 'You can retrieve your token by visiting your dashboard and clicking <b>Generate API token</b>.'
+security:
+  -
+    default: []
